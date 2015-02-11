@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load django_markdown %}
 
-{% block blog_entries %}
+{% block base_content %}
   <div class="post">
     <h2><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
     <p class="meta">
