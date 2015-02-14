@@ -43,6 +43,9 @@ INSTALLED_APPS = (
     'djangocms_link',
     'djangocms_snippet',
     'djangocms_text_ckeditor',  # note this needs to be above the 'cms' entry
+#    'cmsplugin_cascade',
+#    'cmsplugin_cascade.extra_fields',  # optional
+#    'cmsplugin_cascade.sharable',  # optional
     'cms',  # django CMS itself
     'mptt',  # utilities for implementing a tree
     'menus',  # helper for model independent hierarchical website navigation
