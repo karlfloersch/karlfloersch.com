@@ -1,4 +1,4 @@
-ngo==1.7.4
+Django==1.7.4
 django-classy-tags==0.6.1
 django-cms==3.0.9
 django-markdown==0.8.4
