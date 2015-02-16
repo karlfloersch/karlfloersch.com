@@ -7,11 +7,33 @@ body {
   background-color: #eeeeee;
   background-image: url("../images/background.gif");
   background-repeat: repeat;
+  color: #555555;
 }
 
 footer {
 	text-align: center;
 }
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 72px;
+}
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 37px;
+}
+h3 {
+    font-family: 'Fjalla One', sans-serif;
+}
+h4 {
+    font-family: 'Fjalla One', sans-serif;
+}
+h5 {
+    font-family: 'Fjalla One', sans-serif;
+}
+h6 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
 
 
 /* vvvvvvvv  HOMEPAGE  vvvvvvvv */
@@ -41,8 +63,9 @@ footer {
     background-repeat: repeat-x;
 }
 .static-header{
-    height: 400px;
-    background: url('../images/keyboard.jpg') right top no-repeat;
+    padding-top: 20px;
+    height: 230px;
+    background: url('../images/keyboard.png') right top no-repeat;
 }
 .static-header-list{
     list-style-type: none;
@@ -76,6 +99,7 @@ footer {
 /* vvvvvvvv  NAV BAR CSS  vvvvvvvv */
 .navbar {
   margin-bottom: 30px;
+  display:none;
 }
 .navbar-brand {
     padding-top: 0px;
