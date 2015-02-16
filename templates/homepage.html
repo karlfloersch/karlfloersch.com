@@ -4,21 +4,22 @@
 {% block breadcrumb %}{% endblock %}
 
 {% block content %}
+<div class="homepage-header">
+  {% placeholder content1 %}
+</div>
 
-    <div class="jumbotron">
-        {% placeholder jumbotron %}
-    </div>
+<div class="homepage-header">
+  {% placeholder content2 %}
+</div>
 
-    <div class="row">
-        <div class="col-lg-4">
-          {% placeholder col_1 %}
-        </div>
-        <div class="col-lg-4">
-          {% placeholder col_2 %}
-       </div>
-        <div class="col-lg-4">
-          {% placeholder col_3 %}
-        </div>
-    </div>
+<div class="homepage-header">
+  {% placeholder content3 %}
+</div>
+
+<div class="homepage-header">
+  {% placeholder content4 %}
+</div>
+
+    
 
 {% endblock %}

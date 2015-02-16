@@ -175,6 +175,7 @@ STATICFILES_DIRS = (
 CMS_TEMPLATES = (
     ('fullwidth.html', 'Full Width'),
     ('sidebar_left.html', 'Sidebar Left'),
+    ('homepage.html', 'Homepage'),
 )
 
 

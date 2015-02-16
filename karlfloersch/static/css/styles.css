@@ -1,8 +1,171 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
+
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #eeeeee;
+  background-image: url("../images/background.gif");
+  background-repeat: repeat;
 }
 
+footer {
+	text-align: center;
+}
+
+
+/* vvvvvvvv  HOMEPAGE  vvvvvvvv */
+.homepage-header h1 {
+	text-align: center;
+	font-size: 72px;
+	font-family: 'Fjalla One', sans-serif;
+	color: #a5a19e;
+	margin-top: 200px;
+	margin-bottom: 400px;
+}
+.homepage-header h1 .mini-text {
+	font-size: 18px;
+}
+/* ^^^^^^^^  HOMEPAGE  ^^^^^^^^ */
+
+/* vvvvvvvv  STATIC HEADER  vvvvvvvv */
+#grey-header {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 400px;
+    z-index: -10;
+    border-style: none;
+    background-image: url("../images/header-background.png");
+    background-repeat: repeat-x;
+}
+.static-header{
+    height: 400px;
+    background: url('../images/keyboard.jpg') right top no-repeat;
+}
+.static-header-list{
+    list-style-type: none;
+    padding-left: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+.static-header-list li {
+    margin: -10px;
+    border-style: none;
+}
+.static-header-list .nav-binary {
+    font-size: 20px;
+}
+.static-header .static-header-list > .active > a, 
+.static-header .static-header-list > .active > a:hover, 
+.static-header .static-header-list > .active > a:focus {
+    color: #3a3a3a;
+}
+.static-header-list a {
+    color: #666666;
+}
+.static-header-list a:hover, 
+.static-header-list a:focus {
+    color: #3a3a3a;
+    text-decoration: none;
+}
+/* ^^^^^^^^  STATIC HEADER  ^^^^^^^^ */
+
+
+/* vvvvvvvv  NAV BAR CSS  vvvvvvvv */
 .navbar {
   margin-bottom: 30px;
 }
+.navbar-brand {
+    padding-top: 0px;
+    padding-left: 80px;
+    padding-right:50px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-color: #d7d7d7;
+    height: 50px;
+
+}
+.child {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-color: #d7d7d7;
+}
+.nav-binary {
+    font-size: 14px;
+}
+
+/* Twitter Bootstrap Nav Customizations */
+/* navbar */
+.navbar-default {
+    background-color: #eeeeee;
+    border-color: #d7d7d7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #888888;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #3a3a3a;
+    background-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
+/* ^^^^^^^^  NAV BAR CSS  ^^^^^^^^ */
