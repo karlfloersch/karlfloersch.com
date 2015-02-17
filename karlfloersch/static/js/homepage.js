@@ -9,6 +9,10 @@ function resizeLogicGates() {
 	}
 };
 
+$( document ).ready(function() {
+    resizeLogicGates();
+});
+
 $(function() {
     var $window = $(window);
     var width = $window.width();

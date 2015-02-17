@@ -42,8 +42,8 @@ h6 {
 	font-size: 72px;
 	font-family: 'Fjalla One', sans-serif;
 	color: #3a3a3a;
-	margin-top: 205px;
-	margin-bottom: 190px;
+	margin-top: 245px;
+	margin-bottom: 400px;
 }
 .homepage-header h1 .mini-text {
 	font-size: 18px;
@@ -66,6 +66,9 @@ h6 {
     right:0;
     margin-left: auto;
     margin-right: auto;
+}
+#gates {
+   clip: rect(0px, 500px, 0px, 0px); 
 }
 /* ^^^^^^^^  HOMEPAGE  ^^^^^^^^ */
 
