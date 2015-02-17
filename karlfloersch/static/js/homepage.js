@@ -1,3 +1,23 @@
+$( document ).ready(function() {
+    resizeLogicGates();
+});
+
+var timeCounter = 0;
+$(function() {
+    var $window = $(window);
+    var width = $window.width();
+    var height = $window.height();
+
+    setInterval(function () {
+        if ((width != $window.width()) || (height != $window.height())) {
+            width = $window.width();
+            height = $window.height();
+            resizeLogicGates();
+        }
+    }, 300);
+});
+
+
 function resizeLogicGates() {
 	var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
 	$(".logic-gates").css("height", _docHeight*.68);
@@ -9,24 +29,6 @@ function resizeLogicGates() {
 	}
 };
 
-$( document ).ready(function() {
-    resizeLogicGates();
-});
-
-$(function() {
-    var $window = $(window);
-    var width = $window.width();
-    var height = $window.height();
-
-    setInterval(function () {
-        if ((width != $window.width()) || (height != $window.height())) {
-            width = $window.width();
-            height = $window.height();
-            resizeLogicGates();
-
-        }
-    }, 300);
-});
 
 $(window).scroll(function (event) {
     var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
@@ -37,3 +39,4 @@ $(window).scroll(function (event) {
 
     $("#gates").css("clip", "rect(0px, 500px," + scroll*1.1 + "px, 0px")
 });
+

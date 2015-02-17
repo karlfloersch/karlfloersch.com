@@ -84,6 +84,18 @@ h6 {
     background-image: url("../images/header-background.png");
     background-repeat: repeat-x;
 }
+#binary-words {
+    text-align: right;
+    /*position: absolute;*/
+    /*right: 180px;*/
+    /*top: 5px;*/
+    padding-right: 80px;
+    margin-top: -20px;
+    font-size: 150px;
+    color: #bbbbbb;
+    /*font-family: 'Fjalla One', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
 .static-header{
     padding-top: 20px;
     height: 230px;
@@ -91,7 +103,6 @@ h6 {
 }
 .static-header-list{
     list-style-type: none;
-    padding-left: 0px;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
 }
