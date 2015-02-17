@@ -41,12 +41,31 @@ h6 {
 	text-align: center;
 	font-size: 72px;
 	font-family: 'Fjalla One', sans-serif;
-	color: #a5a19e;
-	margin-top: 200px;
-	margin-bottom: 400px;
+	color: #3a3a3a;
+	margin-top: 205px;
+	margin-bottom: 190px;
 }
 .homepage-header h1 .mini-text {
 	font-size: 18px;
+}
+.homepage-adder {
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    width: inherit;
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+.homepage-adder img{
+    position: absolute;
+    display:block;
+    top: 25px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* ^^^^^^^^  HOMEPAGE  ^^^^^^^^ */
 

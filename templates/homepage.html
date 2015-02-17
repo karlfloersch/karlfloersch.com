@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
-{% load cms_tags %}
+{% load cms_tags static sekizai_tags %}
 
 {% block breadcrumb %}{% endblock %}
 
 {% block content %}
+<div class="homepage-adder">
+<img src="{% static "images/logic_gates_grey.png" %}" class="logic-gates" alt="Responsive image" align="middle">
+<img src="{% static "images/logic_gates_blue.png" %}" id="gates" class="logic-gates" alt="Responsive image" align="middle">
+</div>
 <div class="homepage-header">
   {% placeholder content1 %}
 </div>
@@ -19,7 +23,10 @@
 <div class="homepage-header">
   {% placeholder content4 %}
 </div>
+<script src="{% static "js/homepage.js" %}"></script>
 
-    
+{% endblock %}
 
+{% block js %}
+<script src="{% static "js/homepage.js" %}"></script>
 {% endblock %}
