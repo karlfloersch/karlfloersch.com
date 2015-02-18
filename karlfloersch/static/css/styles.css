@@ -50,13 +50,14 @@ h6 {
 }
 .homepage-adder {
     position: absolute;
-    z-index: -10;
     height: 100%;
     width: inherit;
     text-align:center;
     margin-top:0px;
     margin-bottom:0px;
     padding:0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
 }
 .homepage-adder img{
     position: absolute;
@@ -66,9 +67,63 @@ h6 {
     right:0;
     margin-left: auto;
     margin-right: auto;
+    z-index: -10;
 }
 #gates {
    clip: rect(0px, 500px, 0px, 0px); 
+}
+.addr-input {
+    position: absolute;
+    display:block;
+    top: 25px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+    cursor: pointer;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+    margin-top: -10px;
+}
+#addr-carry {
+    left: -95px;
+    top: 5px;
+    width: 20px;
+}
+#addr-B {
+    left: 25px;
+    top: 5px;
+    width: 20px;
+}
+#addr-A {
+    left: 145px;
+    top: 5px;
+    width: 20px;
+}
+.addr-output {
+    position: absolute;
+    display:block;
+    top: 25px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+    top: 2110px;
+}
+#addr-S {
+    left: 120px;
+    width: 20px;
+}
+#addr-Cout {
+    left: -95px;
+    width: 20px;
 }
 /* ^^^^^^^^  HOMEPAGE  ^^^^^^^^ */
 
