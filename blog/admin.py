@@ -3,6 +3,7 @@ from . import models
 from django_markdown.admin import MarkdownModelAdmin
 
 
+# class EntryAdmin(admin.ModelAdmin):
 class EntryAdmin(MarkdownModelAdmin):
     list_display = ("title", "created")
     prepopulated_fields = {"slug": ("title",)}

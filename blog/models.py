@@ -12,11 +12,20 @@ class EntryQuerySet(models.QuerySet):
     def published(self):
         return self.filter(publish=True)
 
+    def published_comp_sci(self):
+        return self.filter(publish=True, blog_type=1)
+
 class Entry(models.Model):
+    BLOG_CHOICES = (
+        (1, 'ComputerScience'),
+        (2, 'Projects'),
+        (3, 'HipHop'),
+    )
     title = models.CharField(max_length=200)
     body = MarkdownField()
     slug = models.SlugField(max_length=200, unique=True)
     publish = models.BooleanField(default=True)
+    blog_type = models.IntegerField(choices=BLOG_CHOICES, default=1)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     tags = models.ManyToManyField(Tag)
