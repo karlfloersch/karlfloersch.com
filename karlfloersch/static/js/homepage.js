@@ -113,15 +113,15 @@ $(window).scroll(function (event) {
     var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
     var logicHeight = _docHeight*.68;
     var scroll = $(window).scrollTop();
-    console.log("doc height: " + logicHeight);
+    console.log("doc height: " + _docHeight);
     console.log(scroll);
     console.log("deveide "  + scroll/_docHeight);
-    if(scroll/_docHeight >= 0.5669497060744612){
+    if(scroll/_docHeight >= .68){
         $(".addr-output").show();
     }else{
         $(".addr-output").hide();
     }
 
-    $("#gates").css("clip", "rect(0px, 500px," + scroll*1.2 + "px, 0px")
+    $("#gates").css("clip", "rect(0px, 500px," + scroll*1.0 + "px, 0px")
 });
 
