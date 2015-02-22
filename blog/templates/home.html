@@ -8,10 +8,13 @@
 {% for object in object_list %}
   <div class="blog-post">
     <h2 class="text-center"><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
-    <p class="meta"> {{ object.created }} |
-    Tagged under {{  object.tags.all|join:", " }}
+    <p class="meta"> {{ object.created }}
     </p>
     {{ object.body|markdown }}
+    <p class="meta">
+    <br>
+    Tags: {{  object.tags.all|join:", " }}
+    </p>
   </div>
 {% endfor %}
 

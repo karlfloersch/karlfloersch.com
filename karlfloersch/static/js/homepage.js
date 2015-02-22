@@ -57,11 +57,12 @@ $(function() {
         }
     }, 300);
 });
-
+var imageHeightOffset = -90;
 function resizeLogicGates() {
 	var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
     var _docWidth = (document.width !== undefined) ? document.width : document.body.offsetWidth;
-	$(".logic-gates").css("height", _docHeight*.68);
+    var imageHeight = $("#image-end").position()['top'] + imageHeightOffset;
+	$(".logic-gates").css("height", imageHeight);
 	if($(".homepage-adder").width() < 740){
 		$(".homepage-adder").css("width", _docWidth);
 	}else{
@@ -75,28 +76,7 @@ function resizeLogicGates() {
         $("#addr-A").css("left", 145);
     }
 
-    if(_docWidth > 976)
-        $(".addr-output").css("top", 2110);
-    else if(_docWidth > 621)
-        $(".addr-output").css("top", 2214);
-    else if(_docWidth > 552)
-        $(".addr-output").css("top", 2265);
-    else if(_docWidth > 545)
-        $(".addr-output").css("top", 2320);
-    else if(_docWidth > 538)
-        $(".addr-output").css("top", 2373);
-    else if(_docWidth > 474)
-        $(".addr-output").css("top", 2425);
-    else if(_docWidth > 453)
-        $(".addr-output").css("top", 2482);
-    else if(_docWidth > 443)
-        $(".addr-output").css("top", 2532);
-    else if(_docWidth > 408)
-        $(".addr-output").css("top", 2586);
-    else if(_docWidth > 391)
-        $(".addr-output").css("top", 2640);
-    else if(_docWidth > 0)
-        $(".addr-output").css("top", 2696);
+    $(".addr-output").css("top", imageHeight + 20); 
 
     if(_docWidth > 545){
         $("#addr-Cout").css("left", -95);
@@ -108,20 +88,23 @@ function resizeLogicGates() {
 
 };
 
-
 $(window).scroll(function (event) {
     var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
     var logicHeight = _docHeight*.68;
     var scroll = $(window).scrollTop();
+    var imageHeight = $("#image-end").position()['top'] + imageHeightOffset;
     console.log("doc height: " + _docHeight);
-    console.log(scroll);
-    console.log("deveide "  + scroll/_docHeight);
-    if(scroll/_docHeight >= .68){
+    console.log("scroll: " + scroll);
+    console.log("scroll/doc height; "  + scroll/_docHeight);
+    if(scroll >= imageHeight){
         $(".addr-output").show();
     }else{
         $(".addr-output").hide();
     }
+    console.log($("#image-end").position());
 
     $("#gates").css("clip", "rect(0px, 500px," + scroll*1.0 + "px, 0px")
 });
+
+
 

@@ -30,11 +30,26 @@
 <div class="homepage-header">
   {% placeholder content3 %}
 </div>
+<div id="image-end"></div>
 <br>
-<div class="homepage-header">
+<div class="homepage-header homepage-links">
   {% placeholder content4 %}
+  <div class="row">
+	<div class="col-md-6">
+		<a href="/thoughts">
+		<img src="{% static "images/homepage-blog.png" %}" class="img-responsive hover-png" style="margin: 0 auto;">
+		</a>
+	</div>
+	<div class="col-md-6">
+		<a href="/projects">
+		<img src="{% static "images/homepage-projects.png" %}" class="img-responsive hover-png" style="margin: 0 auto;">
+		</a>
+	</div>
 </div>
+</div>
+
 <script src="{% static "js/homepage.js" %}"></script>
+
 
 {% endblock %}
 

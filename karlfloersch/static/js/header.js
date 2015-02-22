@@ -14,7 +14,7 @@ $(window).scroll(function (event) {
 });
 
 
-var words = ["l1fe", "w0rk", "t1me", "l0ve", "t1ps", "b0dy", "m1nd", "s0ul"];
+var words = ["l1fe", "w0rk", "t1me", "l0ve", "b1os", "c0de", "m1nd", "s0ul"];
 var wordsLength = words.length;
 function changeBinaryWord() {
     var nextWord = Math.floor(Math.random()*wordsLength);
@@ -25,3 +25,10 @@ function changeBinaryWord() {
     }
 }
 
+$(function () {
+    $('.hover-png').hover( function () {
+        $(this).attr('src', $(this).attr('src').replace(/\.png/, '-on.png') );
+    }, function () {
+        $(this).attr('src', $(this).attr('src').replace('-on.png', '.png') );
+    });
+});
