@@ -29,6 +29,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Other installed apps
+
+    # https://github.com/django-haystack/django-haystack
+    'haystack',
+
+    # django-scribbler [https://github.com/caktus/django-scribbler]
+    'scribbler',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,18 +67,41 @@ TEMPLATES = [
     },
 ]
 
+# This must be included to enable django-scribbler
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    # Other context processors would go here
+
+    # django-scribbler
+    'django.core.context_processors.request',
+)
+
 WSGI_APPLICATION = 'karlfloersch.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
+HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'haystack',
+    },
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 
 # Internationalization
