@@ -1,4 +1,4 @@
-# karlfloersch.com
+# karlfloersch.com (v2.0)
 ## Goals
 Build a search-centric blogging application. This site will make it easy to both produce and consume content. It will do this by focusing on two aspects above all else:
 
