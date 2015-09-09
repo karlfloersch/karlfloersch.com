@@ -1,4 +1,7 @@
 # karlfloersch.com (v2.0)
+## Discontinued - Moved to Quick Blog
+I rethought this project and I'm instead going to build my new blogging site on Node.js and React.js. The new project is entitled [Quick Blog](https://github.com/karlfloersch/quick-blog). Quick Blog will be really cool, so go check it out!
+
 ## Goals
 Build a search-centric blogging application. This site will make it easy to both produce and consume content. It will do this by focusing on two aspects above all else:
 
